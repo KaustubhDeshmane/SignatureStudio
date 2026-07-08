@@ -1,6 +1,6 @@
 # ✍️ SignatureStudio
 
-<p align="center">
+<p>
   <strong>Create, draw, save, and download beautiful digital signatures directly in your browser.</strong>
 </p>
 
@@ -18,7 +18,7 @@
 
 ## 🚀 Live Demo
 
-👉 **YOUR_DEPLOYMENT_LINK**
+👉 **https://kaustubhdeshmane.github.io/SignatureStudio/**
 
 ---
 
