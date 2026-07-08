@@ -1,0 +1,705 @@
+/*==================================================
+  Google Font & Reset
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top left,#4f46e5 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#06b6d4 0%,transparent 30%),
+    linear-gradient(135deg,#09090b,#111827,#0f172a);
+    color:#fff;
+    position:relative;
+}
+
+
+/*==================================================
+  Floating Background
+==================================================*/
+
+.background-blur{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+    opacity:.35;
+}
+
+.blur1{
+    width:300px;
+    height:300px;
+    background:#6366f1;
+    top:-80px;
+    left:-60px;
+}
+
+.blur2{
+    width:350px;
+    height:350px;
+    background:#06b6d4;
+    bottom:-120px;
+    right:-120px;
+}
+
+
+/*==================================================
+  Main Container
+==================================================*/
+
+.container-box{
+
+    width:min(1180px,100%);
+    padding:38px;
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+}
+
+
+/*==================================================
+ Header
+==================================================*/
+
+.hero{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.hero h1{
+
+    font-size:3rem;
+    font-weight:800;
+    letter-spacing:.5px;
+
+    background:linear-gradient(
+    90deg,
+    #ffffff,
+    #c7d2fe,
+    #67e8f9
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+}
+
+.hero p{
+
+    margin-top:12px;
+    color:#cbd5e1;
+    font-size:1rem;
+    line-height:1.7;
+
+}
+
+
+/*==================================================
+ Toolbar
+==================================================*/
+
+.toolbar{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+
+/*==================================================
+ Cards
+==================================================*/
+
+.tool-card{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.tool-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#60a5fa;
+
+    box-shadow:
+    0 10px 25px rgba(96,165,250,.18);
+
+}
+
+.tool-card label{
+
+    font-weight:600;
+
+    color:#f8fafc;
+
+    margin-bottom:16px;
+
+    letter-spacing:.3px;
+
+}
+
+
+/*==================================================
+ Color Picker
+==================================================*/
+
+input[type="color"]{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:none;
+
+    overflow:hidden;
+
+}
+
+input[type="color"]::-webkit-color-swatch{
+
+    border:none;
+
+    border-radius:12px;
+
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper{
+
+    padding:0;
+
+}
+
+
+/*==================================================
+ Range Slider
+==================================================*/
+
+input[type="range"]{
+
+    width:100%;
+
+    cursor:pointer;
+
+    accent-color:#3b82f6;
+
+}
+
+#brushValue{
+
+    margin-top:14px;
+
+    text-align:center;
+
+    font-weight:700;
+
+    color:#60a5fa;
+
+    font-size:.95rem;
+
+}
+
+
+/*==================================================
+ Canvas Section
+==================================================*/
+
+.canvas-card{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    padding:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:32px;
+
+    transition:.35s;
+
+}
+
+.canvas-card:hover{
+
+    border-color:#3b82f6;
+
+    box-shadow:
+    0 15px 35px rgba(59,130,246,.15);
+
+}
+
+
+/*==================================================
+ Canvas
+==================================================*/
+
+#myCanvas{
+
+    width:100%;
+
+    max-width:1000px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    cursor:crosshair;
+
+    border:3px dashed #d1d5db;
+
+    transition:.3s;
+
+}
+
+#myCanvas:hover{
+
+    border-color:#60a5fa;
+
+}
+
+
+/*==================================================
+ Footer
+==================================================*/
+
+footer{
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+footer p{
+
+    color:#94a3b8;
+
+    font-size:.92rem;
+
+    letter-spacing:.2px;
+
+}
+
+/*==================================================
+  Action Buttons
+==================================================*/
+
+.actions{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:8px;
+}
+
+.actions .btn{
+    min-width:165px;
+    height:52px;
+
+    border:none;
+    border-radius:14px;
+
+    font-size:.95rem;
+    font-weight:600;
+    letter-spacing:.4px;
+
+    transition:all .3s ease;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.25);
+}
+
+.actions .btn:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+    0 18px 35px rgba(0,0,0,.35);
+
+}
+
+.actions .btn:active{
+
+    transform:scale(.97);
+
+}
+
+
+/*==================================================
+  Bootstrap Button Overrides
+==================================================*/
+
+.btn-success{
+
+    background:linear-gradient(135deg,#22c55e,#16a34a)!important;
+
+}
+
+.btn-success:hover{
+
+    background:linear-gradient(135deg,#16a34a,#15803d)!important;
+
+}
+
+.btn-danger{
+
+    background:linear-gradient(135deg,#ef4444,#dc2626)!important;
+
+}
+
+.btn-danger:hover{
+
+    background:linear-gradient(135deg,#dc2626,#b91c1c)!important;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb)!important;
+
+}
+
+.btn-primary:hover{
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8)!important;
+
+}
+
+.btn-outline-light{
+
+    color:#fff!important;
+
+    background:rgba(255,255,255,.08)!important;
+
+    border:1px solid rgba(255,255,255,.15)!important;
+
+}
+
+.btn-outline-light:hover{
+
+    background:#ffffff!important;
+
+    color:#111827!important;
+
+}
+
+
+/*==================================================
+  Focus States
+==================================================*/
+
+button:focus,
+input:focus{
+
+    outline:none;
+
+    box-shadow:
+    0 0 0 4px rgba(59,130,246,.35);
+
+}
+
+
+/*==================================================
+  Custom Scrollbar
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#2563eb;
+
+}
+
+
+/*==================================================
+  Small Fade Animation
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+.toolbar,
+.canvas-card,
+.actions,
+footer{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.toolbar{
+
+    animation-delay:.15s;
+
+}
+
+.canvas-card{
+
+    animation-delay:.25s;
+
+}
+
+.actions{
+
+    animation-delay:.35s;
+
+}
+
+footer{
+
+    animation-delay:.45s;
+
+}
+
+
+/*==================================================
+  Responsive
+==================================================*/
+
+@media(max-width:992px){
+
+    .container-box{
+
+        padding:28px;
+
+    }
+
+    .toolbar{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    body{
+
+        padding:18px;
+
+    }
+
+    .container-box{
+
+        padding:22px;
+
+        border-radius:22px;
+
+    }
+
+    .hero{
+
+        margin-bottom:28px;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero p{
+
+        font-size:.92rem;
+
+    }
+
+    .canvas-card{
+
+        padding:15px;
+
+    }
+
+    #myCanvas{
+
+        border-width:2px;
+
+    }
+
+    .actions{
+
+        gap:12px;
+
+    }
+
+    .actions .btn{
+
+        width:100%;
+
+        min-width:unset;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .hero h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .tool-card{
+
+        padding:18px;
+
+    }
+
+    .tool-card label{
+
+        font-size:.92rem;
+
+    }
+
+    #brushValue{
+
+        font-size:.85rem;
+
+    }
+
+    footer p{
+
+        font-size:.82rem;
+
+    }
+
+}
+
+
+/*==================================================
+  Smooth Global Transitions
+==================================================*/
+
+button,
+input,
+.tool-card,
+.canvas-card,
+#myCanvas{
+
+    transition:all .3s ease;
+}
+
+.canvas-wrapper{
+    position:relative;
+    display:inline-block;
+}
+
+#myCanvas{
+    cursor:none;
+}
+
+#brushCursor{
+    position:absolute;
+    left:0;
+    top:0;
+    pointer-events:none;
+    border-radius:50%;
+    border:2px solid white;
+    z-index:100;
+}
