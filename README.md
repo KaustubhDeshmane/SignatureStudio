@@ -147,6 +147,13 @@ Feel free to reach out for collaborations, project discussions, feedback, or sug
 
 ---
 
-<p align="center">
-Made with ❤️ using HTML, CSS & JavaScript
+<div align="center">
+  
+<p>
+  
+### Give a ⭐ if you find these project useful
+  
+Built with ❤️ by Kaustubh Deshmane
 </p>
+
+</div>
